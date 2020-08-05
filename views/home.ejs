@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in and Registration</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="formBox">
+			<a href="/users">view users</a>
+            <div class="buttonBox">
+                <div id="btn"></div>
+                <button id="login-btn" class="toggle-btn">Log in</button>
+                <button id="register-btn" class="toggle-btn">Sign up</button>
+            </div>
+
+            <form id= "login" class="input-group">
+                <input type="email" name="email_id" class="input-field" placeholder="Email Id" required>
+                <input type="password"name="password" minlength="8" class="input-field" placeholder="Enter Password" required>
+                <!--<input type="checkbox" class="check-box"><span>Keep me signed in</span>-->
+                <button class="submit-btn" >Log in</button>
+            </form>
+
+            <form method="POST" action="/addUser" id="register" class="input-group">
+                <input type="text" class="input-field" name="firstName" placeholder="First Name" required>
+                <input type="text" class="input-field" name="lastName" placeholder="Last Name">
+                <input type="email" class="input-field" name="email" placeholder="Email Id" required>
+                <input type="password" minlength="8" name="password" class="input-field" placeholder="Set Password" required>
+                <input type="password" minlength="8" name="passCheck" class="input-field" placeholder="Confirm Password" required>
+               <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+				<br>
+                <button class="submit-btn" >Register Now</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="form.js"></script>
+</body>
+</html>
